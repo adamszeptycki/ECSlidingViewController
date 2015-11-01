@@ -409,6 +409,13 @@
     return _resetTapGesture;
 }
 
+- (UIScreenEdgePanGestureRecognizer*)screenEdgeGestureRecgonizer {
+    if(_screenEdgeGesture) return _screenEdgeGesture;
+    _screenEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(detectPanGestureRecognizer:)];
+    _screenEdgeGesture.edges = UIRectEdgeLeft;
+    return _screenEdgeGesture;
+}
+
 - (UIPanGestureRecognizer *)panGesture {
     if (_panGesture) return _panGesture;
     

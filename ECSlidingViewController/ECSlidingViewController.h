@@ -110,6 +110,7 @@
     CGFloat _anchorRightRevealAmount;
     UIPanGestureRecognizer *_panGesture;
     UITapGestureRecognizer *_resetTapGesture;
+    UIScreenEdgePanGestureRecognizer *_screenEdgeGesture;
                                                            
     @protected
     UIViewController *_topViewController;
